@@ -1,0 +1,21 @@
+.navbar {
+  margin: 0 10px;
+  background: linear-gradient(to right, #87ceeb, #add8e6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.nav-img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar h1 {
+  font-size: 25px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
