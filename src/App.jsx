@@ -1,9 +1,16 @@
 import { useState } from "react";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import CenturyList from "./components/CenturyList/CenturyList";
 
 function App() {
   return (
     <>
-      <div>50 Centuries by Virat Kohli</div>
+      <div className="cotainer">
+        <Navbar />
+        <CenturyList />
+        <Footer />
+      </div>
     </>
   );
 }
