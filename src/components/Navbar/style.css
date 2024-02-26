@@ -1,11 +1,9 @@
 .navbar {
-  margin: 0 10px;
   background: linear-gradient(to right, #87ceeb, #add8e6);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80px;
-  border-radius: 10px;
 }
 
 .nav-img {

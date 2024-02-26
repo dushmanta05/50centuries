@@ -6,11 +6,11 @@ import CenturyList from "./components/CenturyList/CenturyList";
 function App() {
   return (
     <>
-      <div className="cotainer">
-        <Navbar />
+      <Navbar />
+      <div className="container">
         <CenturyList />
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }
