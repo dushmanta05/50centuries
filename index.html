@@ -1,14 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/vk.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>50Centuries: Virat Kohli's 50 ODI Centuries</title>
-    <link rel="stylesheet" href="/src/assets/css/global.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/png" href="/vk.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>50Centuries: Virat Kohli's 50 ODI Centuries in Pictures</title>
+        <link rel="stylesheet" href="/src/assets/css/global.css" />
+        <style>
+            .my-masonry-grid {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                margin-left: -20px;
+                width: auto;
+            }
+            .my-masonry-grid_column {
+                padding-left: 20px;
+                background-clip: padding-box;
+            }
+
+            .my-masonry-grid_column > div {
+                margin-bottom: 20px;
+            }
+
+            @media (max-width: 1100px) {
+                .my-masonry-grid {
+                    -webkit-column-count: 2;
+                    -moz-column-count: 2;
+                    column-count: 2;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .my-masonry-grid {
+                    -webkit-column-count: 1;
+                    -moz-column-count: 1;
+                    column-count: 1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="module" src="/src/main.jsx"></script>
+    </body>
 </html>
