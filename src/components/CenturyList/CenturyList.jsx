@@ -1,4 +1,3 @@
-import React from "react";
 import Masonry from 'react-masonry-css';
 
 import centuryData from "../../data/centuryData";
@@ -17,12 +16,11 @@ const CenturyList = () => {
       className="my-masonry-grid"
       columnClassName="my-masonry-grid_column"
     >
-      {centuryData &&
-        centuryData.map((data) => (
-          <div key={data.id} style={{ marginBottom: "20px" }}>
-            <CenturyCard data={data} />
-          </div>
-        ))}
+      {centuryData?.map((data) => (
+        <div key={data.id} style={{ marginBottom: "20px" }}>
+          <CenturyCard data={data} />
+        </div>
+      ))}
     </Masonry>
   );
 };

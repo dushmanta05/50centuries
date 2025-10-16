@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const CenturyCard = ({ data }) => {
   const cardStyle = {
@@ -52,24 +52,42 @@ const CenturyCard = ({ data }) => {
     margin: 0,
   };
 
+  const handleMouseEnter = (e) => {
+    e.currentTarget.style.transform = cardStyleHover.transform;
+    e.currentTarget.style.boxShadow = cardStyleHover.boxShadow;
+    const img = e.currentTarget.querySelector('img');
+    if (img) img.style.transform = "scale(1.05)";
+  };
+
+  const handleMouseLeave = (e) => {
+    e.currentTarget.style.transform = "";
+    e.currentTarget.style.boxShadow = "";
+    const img = e.currentTarget.querySelector('img');
+    if (img) img.style.transform = "";
+  };
+
   return (
-    <div style={cardStyle} onMouseEnter={(e) => {
-      Object.assign(e.target.style, cardStyleHover);
-      const img = e.target.querySelector('img');
-      if (img) img.style.transform = "scale(1.05)";
-    }} onMouseLeave={(e) => {
-      e.target.style.transform = "";
-      e.target.style.boxShadow = "";
-      const img = e.target.querySelector('img');
-      if (img) img.style.transform = "";
-    }}>
+    <li
+      style={cardStyle}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div style={imgDivStyle}>
-        <img src={data.img} alt={data.alt} style={imgStyle} />
-        <div style={idBadgeStyle}>#{data.id}</div>
+        <img src={data?.img} alt={data?.alt} style={imgStyle} />
+        <div style={idBadgeStyle}>#{data?.id}</div>
       </div>
-      <p style={textStyle}>{data.text}</p>
-    </div>
+      <p style={textStyle}>{data?.text}</p>
+    </li>
   );
+};
+
+CenturyCard.propTypes = {
+  data: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    text: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default CenturyCard;

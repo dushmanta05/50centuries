@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -28,8 +28,8 @@ const Navbar = () => {
     padding: "0 20px",
     zIndex: 1000,
     transition: "all 0.3s ease",
-    background: scrolled 
-      ? "rgba(255, 255, 255, 0.1)" 
+    background: scrolled
+      ? "rgba(255, 255, 255, 0.1)"
       : "transparent",
     backdropFilter: scrolled ? "blur(8px)" : "none",
     WebkitBackdropFilter: scrolled ? "blur(8px)" : "none",
